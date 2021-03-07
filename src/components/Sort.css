@@ -1,0 +1,8 @@
+.Sort {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: auto;
+    color: black;
+    font-size: 1.25rem;
+}
