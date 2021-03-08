@@ -56,17 +56,19 @@ function App() {
     <div className="App">
       <Header className="Header"/>
       
-      <Title text="New Task" />
-      <TaskForm addTaskHandler={addTaskHandler} />
+      <div>
+        <Title text="New Task" />
+        <TaskForm addTaskHandler={addTaskHandler} />
 
-      <hr></hr>
+        <hr></hr>
 
-      <Title text="Task List" />
-      <div className="SortSearch">
-        <Search filterTaskHandler={setSearchTerm} />
-        <Sort sortTaskHandler={setSortOption}/>
+        <Title text="Task List" />
+        <div className="SortSearch">
+          <Search filterTaskHandler={setSearchTerm} />
+          <Sort sortTaskHandler={setSortOption}/>
+        </div>
+        <TaskList data={getData()} removeTaskHandler={removeTaskHandler} />
       </div>
-      <TaskList data={getData()} removeTaskHandler={removeTaskHandler} />
     </div>
   );
 }
